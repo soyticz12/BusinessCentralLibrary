@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BCLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:BCLibrary.Client.BusinessCentralClient">
+            <summary>
+            A client for authenticating and interacting with the Microsoft Dynamics 365 Business Central API.
+            </summary>
+        </member>
+        <member name="M:BCLibrary.Client.BusinessCentralClient.#ctor(BCLibrary.Options.BusinessCentralOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BCLibrary.Client.BusinessCentralClient"/> class with configuration options.
+            </summary>
+            <param name="options">The configuration options required to connect to Business Central.</param>
+        </member>
+        <member name="M:BCLibrary.Client.BusinessCentralClient.GetAuthenticatedClientAsync">
+            <summary>
+            Returns an authenticated <see cref="T:System.Net.Http.HttpClient"/> instance that can be used to make requests to the Business Central API.
+            </summary>
+            <returns>An authenticated <see cref="T:System.Net.Http.HttpClient"/> with the appropriate access token set in the Authorization header.</returns>
+        </member>
+        <member name="M:BCLibrary.Client.BusinessCentralClient.GetBaseApiUrl">
+            <summary>
+            Constructs and returns the base URL for accessing Business Central API endpoints for the configured tenant and company.
+            </summary>
+            <returns>The fully-qualified base URL for the Business Central API.</returns>
+        </member>
+        <member name="T:BCLibrary.Enums.BusinessCentralEnvironment">
+            <summary>
+            Specifies the target environment for Microsoft Dynamics 365 Business Central API.
+            </summary>
+        </member>
+        <member name="F:BCLibrary.Enums.BusinessCentralEnvironment.Production">
+            <summary>
+            The production environment of Business Central.
+            </summary>
+        </member>
+        <member name="F:BCLibrary.Enums.BusinessCentralEnvironment.Sandbox">
+            <summary>
+            The sandbox (test) environment of Business Central.
+            </summary>
+        </member>
+        <member name="T:BCLibrary.Interface.IBusinessCentralClient">
+            <summary>
+            Defines methods for authenticating and accessing the Microsoft Dynamics 365 Business Central API.
+            </summary>
+        </member>
+        <member name="M:BCLibrary.Interface.IBusinessCentralClient.GetAuthenticatedClientAsync">
+            <summary>
+            Gets an authenticated <see cref="T:System.Net.Http.HttpClient"/> instance with a valid OAuth 2.0 access token for Business Central.
+            </summary>
+            <returns>
+            A <see cref="T:System.Threading.Tasks.Task`1"/> that represents the asynchronous operation.
+            The task result contains the authenticated <see cref="T:System.Net.Http.HttpClient"/>.
+            </returns>
+        </member>
+        <member name="M:BCLibrary.Interface.IBusinessCentralClient.GetBaseApiUrl">
+            <summary>
+            Constructs and returns the base API URL for accessing Business Central resources.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> representing the full API base URL, including the tenant ID, environment, and company ID.
+            </returns>
+        </member>
+        <member name="T:BCLibrary.Options.BusinessCentralOptions">
+            <summary>
+            Configuration options required to authenticate and interact with the Microsoft Dynamics 365 Business Central API.
+            </summary>
+        </member>
+        <member name="P:BCLibrary.Options.BusinessCentralOptions.TenantId">
+            <summary>
+            Gets or sets the Azure Active Directory tenant ID.
+            </summary>
+        </member>
+        <member name="P:BCLibrary.Options.BusinessCentralOptions.ClientId">
+            <summary>
+            Gets or sets the client (application) ID registered in Azure AD.
+            </summary>
+        </member>
+        <member name="P:BCLibrary.Options.BusinessCentralOptions.ClientSecret">
+            <summary>
+            Gets or sets the client secret associated with the Azure AD application.
+            </summary>
+        </member>
+        <member name="P:BCLibrary.Options.BusinessCentralOptions.CompanyId">
+            <summary>
+            Gets or sets the Business Central company ID to target.
+            </summary>
+        </member>
+        <member name="P:BCLibrary.Options.BusinessCentralOptions.Environment">
+            <summary>
+            Gets or sets the target environment (Production or Sandbox).
+            Defaults to <see cref="F:BCLibrary.Enums.BusinessCentralEnvironment.Sandbox"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "qNwlpudGc5E=",
+  "success": true,
+  "projectFilePath": "/workspaces/BusinessCentralLibrary/BCLibrary/BCLibrary.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/microsoft.identity.client/4.73.0/microsoft.identity.client.4.73.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.identitymodel.abstractions/6.35.0/microsoft.identitymodel.abstractions.6.35.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.diagnostics.diagnosticsource/6.0.1/system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

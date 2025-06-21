@@ -1,0 +1,15 @@
+/workspaces/BusinessCentralLibrary/BCLibrary/bin/Release/net8.0/BCLibrary.deps.json
+/workspaces/BusinessCentralLibrary/BCLibrary/bin/Release/net8.0/BCLibrary.dll
+/workspaces/BusinessCentralLibrary/BCLibrary/bin/Release/net8.0/BCLibrary.pdb
+/workspaces/BusinessCentralLibrary/BCLibrary/bin/Release/net8.0/BCLibrary.xml
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/BCLibrary.csproj.AssemblyReference.cache
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/BCLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/BCLibrary.AssemblyInfoInputs.cache
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/BCLibrary.AssemblyInfo.cs
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/BCLibrary.csproj.CoreCompileInputs.cache
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/BCLibrary.sourcelink.json
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/BCLibrary.dll
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/refint/BCLibrary.dll
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/BCLibrary.xml
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/BCLibrary.pdb
+/workspaces/BusinessCentralLibrary/BCLibrary/obj/Release/net8.0/ref/BCLibrary.dll
