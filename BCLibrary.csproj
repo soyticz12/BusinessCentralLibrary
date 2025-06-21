@@ -7,7 +7,7 @@
 
     <!-- NuGet package metadata -->
     <PackageId>BCLibrary</PackageId>                    <!-- Change this to your package ID -->
-    <Version>1.0.1</Version>                            <!-- Update version as needed -->
+    <Version>1.0.2</Version>                            <!-- Update version as needed -->
     <Authors>Your Name or Company</Authors>
     <Company>Your Company</Company>
     <Description>A client library for Microsoft Dynamics 365 Business Central API.</Description>

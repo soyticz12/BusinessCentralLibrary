@@ -62,5 +62,54 @@ namespace BCLibrary.Client
             // Format: https://api.businesscentral.dynamics.com/v2.0/{tenant}/{Environment}/api/v2.0/companies({companyId})/
             return $"https://api.businesscentral.dynamics.com/v2.0/{_options.TenantId}/{_options.Environment}/api/v2.0/companies?={_options.CompanyId}";
         }
+
+        /// <summary>
+        /// Acquires and returns a valid access token for the Business Central API.
+        /// </summary>
+        /// <returns>The access token as a string.</returns>
+        public async Task<string> GetAccessTokenAsync()
+        {
+            var scopes = new[] { "https://api.businesscentral.dynamics.com/.default" };
+
+            var app = ConfidentialClientApplicationBuilder.Create(_options.ClientId)
+                .WithClientSecret(_options.ClientSecret)
+                .WithAuthority($"https://login.microsoftonline.com/{_options.TenantId}")
+                .Build();
+
+            var result = await app.AcquireTokenForClient(scopes).ExecuteAsync();
+
+            return result.AccessToken;
+        }
+
+        /// <summary>
+        /// Sends an authenticated GET request to the specified Business Central API endpoint.
+        /// </summary>
+        /// <param name="relativeOrFullUrl">
+        /// Either a full API URL (starting with https://) or a relative path appended to the environment base URL.
+        /// </param>
+        /// <returns>The raw JSON response as a string.</returns>
+        public async Task<string> GetFromBusinessCentralApiAsync(string relativeOrFullUrl)
+        {
+            var httpClient = await GetAuthenticatedClientAsync();
+
+            string requestUrl;
+
+            if (relativeOrFullUrl.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+            {
+                // Full URL provided, use it as-is
+                requestUrl = relativeOrFullUrl;
+            }
+            else
+            {
+                // Relative path provided, combine with base API URL
+                requestUrl = GetBaseApiUrl().TrimEnd('/') + "/" + relativeOrFullUrl.TrimStart('/');
+            }
+
+            var response = await httpClient.GetAsync(requestUrl);
+            response.EnsureSuccessStatusCode();
+
+            return await response.Content.ReadAsStringAsync();
+        }
+
     }
 }

@@ -5,7 +5,7 @@
   },
   "projects": {
     "/workspaces/BusinessCentralLibrary/BCLibrary/BCLibrary.csproj": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "restore": {
         "projectUniqueName": "/workspaces/BusinessCentralLibrary/BCLibrary/BCLibrary.csproj",
         "projectName": "BCLibrary",

@@ -27,6 +27,21 @@
             </summary>
             <returns>The fully-qualified base URL for the Business Central API.</returns>
         </member>
+        <member name="M:BCLibrary.Client.BusinessCentralClient.GetAccessTokenAsync">
+            <summary>
+            Acquires and returns a valid access token for the Business Central API.
+            </summary>
+            <returns>The access token as a string.</returns>
+        </member>
+        <member name="M:BCLibrary.Client.BusinessCentralClient.GetFromBusinessCentralApiAsync(System.String)">
+            <summary>
+            Sends an authenticated GET request to the specified Business Central API endpoint.
+            </summary>
+            <param name="relativeOrFullUrl">
+            Either a full API URL (starting with https://) or a relative path appended to the environment base URL.
+            </param>
+            <returns>The raw JSON response as a string.</returns>
+        </member>
         <member name="T:BCLibrary.Interface.IBusinessCentralClient">
             <summary>
             Defines methods for authenticating and accessing the Microsoft Dynamics 365 Business Central API.
