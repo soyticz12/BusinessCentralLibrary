@@ -27,21 +27,6 @@
             </summary>
             <returns>The fully-qualified base URL for the Business Central API.</returns>
         </member>
-        <member name="T:BCLibrary.Enums.BusinessCentralEnvironment">
-            <summary>
-            Specifies the target environment for Microsoft Dynamics 365 Business Central API.
-            </summary>
-        </member>
-        <member name="F:BCLibrary.Enums.BusinessCentralEnvironment.Production">
-            <summary>
-            The production environment of Business Central.
-            </summary>
-        </member>
-        <member name="F:BCLibrary.Enums.BusinessCentralEnvironment.Sandbox">
-            <summary>
-            The sandbox (test) environment of Business Central.
-            </summary>
-        </member>
         <member name="T:BCLibrary.Interface.IBusinessCentralClient">
             <summary>
             Defines methods for authenticating and accessing the Microsoft Dynamics 365 Business Central API.
@@ -92,7 +77,7 @@
         <member name="P:BCLibrary.Options.BusinessCentralOptions.Environment">
             <summary>
             Gets or sets the target environment (Production or Sandbox).
-            Defaults to <see cref="F:BCLibrary.Enums.BusinessCentralEnvironment.Sandbox"/>.
+            Defaults to <see cref="!:BusinessCentralEnvironment.Sandbox"/>.
             </summary>
         </member>
     </members>

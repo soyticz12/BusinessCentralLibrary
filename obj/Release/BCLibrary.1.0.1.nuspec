@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BCLibrary</id>
+    <version>1.0.1</version>
+    <authors>Your Name or Company</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/yourrepo</projectUrl>
+    <description>A client library for Microsoft Dynamics 365 Business Central API.</description>
+    <repository type="git" url="https://github.com/yourrepo" commit="9be3860e5c12ec710216847e281ab8c37530eb8c" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Microsoft.Identity.Client" version="4.73.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/workspaces/BusinessCentralLibrary/BCLibrary/bin/Release/net8.0/BCLibrary.dll" target="lib/net8.0/BCLibrary.dll" />
+    <file src="/workspaces/BusinessCentralLibrary/BCLibrary/bin/Release/net8.0/BCLibrary.xml" target="lib/net8.0/BCLibrary.xml" />
+  </files>
+</package>

@@ -31,6 +31,6 @@ namespace BCLibrary.Options
         /// Gets or sets the target environment (Production or Sandbox).
         /// Defaults to <see cref="BusinessCentralEnvironment.Sandbox"/>.
         /// </summary>
-        public BusinessCentralEnvironment Environment { get; set; } = BusinessCentralEnvironment.Sandbox;
+        public string Environment { get; set; } 
     }
 }

@@ -59,11 +59,8 @@ namespace BCLibrary.Client
         /// <returns>The fully-qualified base URL for the Business Central API.</returns>
         public string GetBaseApiUrl()
         {
-            // Convert enum to lowercase string ("sandbox" or "production")
-            string env = _options.Environment.ToString().ToLower();
-
-            // Format: https://api.businesscentral.dynamics.com/v2.0/{tenant}/{env}/api/v2.0/companies({companyId})/
-            return $"https://api.businesscentral.dynamics.com/v2.0/{_options.TenantId}/{env}/api/v2.0/companies({_options.CompanyId})/";
+            // Format: https://api.businesscentral.dynamics.com/v2.0/{tenant}/{Environment}/api/v2.0/companies({companyId})/
+            return $"https://api.businesscentral.dynamics.com/v2.0/{_options.TenantId}/{_options.Environment}/api/v2.0/companies?={_options.CompanyId}";
         }
     }
 }
